@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://SampleIntegrationService" xmlns:tns="http://SampleIntegrationService">
+      <xsd:element xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" ibmSchExtn:docRoot="true" name="operation1">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="CID" nillable="true" type="xsd:int"/>
+                <xsd:element name="ACCNO" nillable="true" type="xsd:int"/>
+                <xsd:element name="CrAmt" nillable="true" type="xsd:string"/>
+                <xsd:element name="DrAmt" nillable="true" type="xsd:string"/>
+                <xsd:element name="TrDateTime" nillable="true" type="xsd:string"/>
+                <xsd:element name="AccStatus" nillable="true" type="xsd:string"/>
+                <xsd:element name="AvlBal" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" ibmSchExtn:docRoot="true" name="operation1Response">
+        <xsd:complexType>
+          <xsd:sequence>
+                <xsd:element name="Description" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    <xsd:element xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" ibmSchExtn:docRoot="true" name="operation2">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="CID" nillable="true" type="xsd:int"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+    <xsd:element xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" ibmSchExtn:docRoot="true" name="operation2Response">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="CID" nillable="true" type="xsd:int"/>
+        <xsd:element name="ACCNO" nillable="true" type="xsd:int"/>
+        <xsd:element name="CrAmt" nillable="true" type="xsd:string"/>
+                <xsd:element name="DrAmt" nillable="true" type="xsd:string"/>
+                <xsd:element name="TrDtaTime" nillable="true" type="xsd:string"/>
+                <xsd:element name="AccStatus" nillable="true" type="xsd:string"/>
+                <xsd:element name="AvlBalance" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

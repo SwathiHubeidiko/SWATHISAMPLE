@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="SampleIntegrationService" targetNamespace="http://SampleIntegrationService" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://SampleIntegrationService" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:documentation>
+    <wsdl:appinfo source="WMQI_APPINFO">
+      <MRWSDLAppInfo imported="true">
+        <binding hasEncoding="false" imported="true" name="SampleIntegrationServiceHttpBinding" originalBindingStyle="document"/>
+        <generatedXSD location="SampleIntegrationService_InlineSchema1.xsd"/>
+      </MRWSDLAppInfo>
+    </wsdl:appinfo>
+  </wsdl:documentation>
+  
+  
+  
+  
+  
+  
+  <wsdl:types>
+    
+        <xsd:schema targetNamespace="http://SampleIntegrationService">
+      <xsd:include schemaLocation="SampleIntegrationService_InlineSchema1.xsd"/>
+    </xsd:schema>
+    </wsdl:types>
+  <wsdl:message name="operation1RequestMsg">
+    <wsdl:part element="tns:operation1" name="operation1Parameters"/>
+  </wsdl:message>
+  <wsdl:message name="operation1ResponseMsg">
+    <wsdl:part element="tns:operation1Response" name="operation1Result"/>
+  </wsdl:message>
+    <wsdl:message name="operation2RequestMsg">
+    <wsdl:part element="tns:operation2" name="operation2Parameters"/>
+  </wsdl:message>
+    <wsdl:message name="operation2ResponseMsg">
+    <wsdl:part element="tns:operation2Response" name="operation2Result"/>
+  </wsdl:message>
+    <wsdl:portType name="SampleIntegrationService">
+    <wsdl:operation name="operation1">
+            <wsdl:input message="tns:operation1RequestMsg" name="operation1Request"/>
+            <wsdl:output message="tns:operation1ResponseMsg" name="operation1Response"/>
+        </wsdl:operation>
+        <wsdl:operation name="operation2">
+      <wsdl:input message="tns:operation2RequestMsg" name="operation2Request"/>
+            <wsdl:output message="tns:operation2ResponseMsg" name="operation2Response"/>
+        </wsdl:operation>
+    </wsdl:portType>
+  <wsdl:binding name="SampleIntegrationServiceHttpBinding" type="tns:SampleIntegrationService">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="operation1">
+            <soap:operation soapAction="http://SampleIntegrationService/operation1"/>
+            <wsdl:input name="operation1Request">
+                <soap:body use="literal"/>
+            </wsdl:input>
+      <wsdl:output name="operation1Response">
+                <soap:body use="literal"/>
+            </wsdl:output>
+    </wsdl:operation>
+        <wsdl:operation name="operation2">
+            <soap:operation soapAction="http://SampleIntegrationService/operation2"/>
+            <wsdl:input name="operation2Request">
+                <soap:body use="literal"/>
+            </wsdl:input>
+      <wsdl:output name="operation2Response">
+                <soap:body use="literal"/>
+            </wsdl:output>
+    </wsdl:operation>
+    </wsdl:binding>
+  <wsdl:service name="SampleIntegrationServiceHttpService">
+    <wsdl:port binding="tns:SampleIntegrationServiceHttpBinding" name="SampleIntegrationServiceHttpPort">
+      <soap:address location="http://localhost:7800/SampleIntegrationService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

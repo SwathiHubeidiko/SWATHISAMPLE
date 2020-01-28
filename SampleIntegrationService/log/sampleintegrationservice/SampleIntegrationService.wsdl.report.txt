@@ -1,0 +1,16 @@
+
+
+Importing file: C:\Users\Administrator\IBM\ACET11\workspace\SampleIntegrationService\SampleIntegrationService.wsdl
+
+The WSDL import will proceed with bindings SampleIntegrationServiceHttpBinding.
+Creating wsdl schema document for platform:/resource/SampleIntegrationService/SampleIntegrationService.wsdl.
+Parsing wsdl binding {http://SampleIntegrationService}SampleIntegrationServiceHttpBinding.
+Parsing wsdl binding input operation1.
+Parsing wsdl binding output operation1.
+Parsing wsdl binding input operation2.
+Parsing wsdl binding output operation2.
+Processing doc style for operation operation1.
+Processing doc style for operation operation2.
+Populating WSDL schema SampleIntegrationService.xsd.
+Creating file SampleIntegrationService.xsd in the workspace.
+Copying source WSDL SampleIntegrationService.wsdl to SampleIntegrationService.wsdl.
