@@ -19,6 +19,6 @@ CREATE COMPUTE MODULE samplemsgflow_Compute
 	END;
 
 	CREATE PROCEDURE CopyEntireMessage() BEGIN
-		SET OutputRoot = InputRoot;
+	SET OutputRoot.XMLNSC.Employee = InputRoot.JSON.Data.Emp;
 	END;
 END MODULE;
